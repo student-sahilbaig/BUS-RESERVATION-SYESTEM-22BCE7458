@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ticket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Ticket</h1>
+        <div id="ticket-details"></div>
+        <button onclick="location.href='print_ticket.html'">Print Ticket</button>
+        <button onclick="location.href='search.html'">Book Another Ticket</button>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // Display ticket details
+        function displayTicket() {
+            const ticketDetails = document.getElementById("ticket-details");
+            const ticket = JSON.parse(localStorage.getItem("ticket"));
+            if (ticket) {
+                ticketDetails.innerHTML = `
+                    <p><strong>Bus ID:</strong> ${ticket.busId}</p>
+                    <p><strong>Route:</strong> ${ticket.start} - ${ticket.end}</p>
+                    <p><strong>Date:</strong> ${ticket.date}</p>
+                    <p><strong>Passengers:</strong> ${ticket.passengers.join(", ")}</p>
+                    <p><strong>Total Cost:</strong> Rs ${ticket.totalCost}</p>
+                `;
+            } else {
+                ticketDetails.innerHTML = "<p>No ticket found.</p>";
+            }
+        }
+
+        // On page load for displaying ticket
+        if (document.getElementById("ticket-details")) {
+            displayTicket();
+        }
+    </script>
+</body>
+</html>

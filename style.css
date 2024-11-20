@@ -1,0 +1,234 @@
+/* Global Styles */
+* {
+    box-sizing: border-box; /* Ensures consistent box model for all elements */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('BG_PROJECT.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Full height of the viewport */
+    color: #fff;
+}
+
+/* Container Styles */
+.container {
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Login and Register Page Styles */
+.login-container, .register-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+.login-container h2, .register-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%; /* Ensures input fills the container */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styles for Login and Register */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Link styles */
+.link p {
+    color: #28a745; /* Change this to your desired color */
+    font-weight: bold;
+    text-align: center;
+}
+
+.link a {
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles for Admin Login */
+.btn-admin {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-admin:hover {
+    background-color: #218838;
+}
+
+/* Seat Layout Styles */
+#seat-layout {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four seats per row */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: gray; /* Available seats in gray */
+    color: white;
+}
+
+.seat.selected {
+    background-color: green; /* Selected seats in green */
+}
+
+.seat.reserved {
+    background-color: red; /* Reserved seats in red */
+    cursor: not-allowed;
+}
+
+.seat-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: grey;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.seat.available {
+    background-color: #ddd;
+}
+.seat.selected {
+    background-color: green;
+    color: white;
+}
+.seat.unavailable {
+    background-color: red;
+    cursor: not-allowed;
+}
+#seat-matrix {
+    color: black;
+    text-align: center;
+    background: rgba(163, 181, 189, 0.8); /* Slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding-right: 50px;
+    margin-right: 50px;
+}
+

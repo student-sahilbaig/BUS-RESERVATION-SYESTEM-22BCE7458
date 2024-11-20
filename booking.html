@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book a Bus</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Bus Reservation System</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="booking.html">Book a Bus</a>
+                <a href="myBookings.html">My Bookings</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Book Your Seat</h1>
+        <form id="bookingForm">
+            <label for="busId">Select Bus:</label>
+            <select id="busId" name="busId">
+                <option value="1">Express Line 101</option>
+                <option value="2">Express Line 102</option>
+                <option value="3">Express Line 103</option>
+            </select>
+
+            <label for="username">Enter Your Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit" onclick="bookNow()">Confirm Booking</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bus Reservation System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
